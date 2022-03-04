@@ -8,7 +8,7 @@ function Header() {
             <div className={styles.img_container}>
                 <img src={logo} alt="Logo" />
             </div>
-            <h1 className={styles.title}>Filmes</h1>
+            <h1 onClick={() => window.location.reload()} className={styles.title}>Filmes</h1>
             <div className={styles.img_container}>
                 <img src={play} alt="Play" />
             </div>
