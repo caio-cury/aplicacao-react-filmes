@@ -1,0 +1,25 @@
+header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.title {
+    color: var(--main-green);
+    font-size: 3rem;
+    padding: .4rem;
+    border-radius: 15px;
+}
+
+.img_container {
+    background-color: var(--main-green);
+    padding: .7rem;
+    border-radius: 50%;
+}
+
+.img_container > img {
+    width: 30px;
+    height: 30px;
+}

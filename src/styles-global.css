@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #242424;
+    --main-green: #00A7A0;
+    --background-grey: rgb(128, 128, 128, .30);
+}

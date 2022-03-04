@@ -1,0 +1,36 @@
+.card_filme {
+    cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(17, 16, 16, 0.3);
+    background-color: var(--background-grey);
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    width: 200px;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+.no_img {
+    text-align: center;
+}
+
+.card_filme:hover {
+    transform: scale(1.095);
+    transition: ease-in-out;
+    transition-duration: 500ms;
+}
+
+.content {
+    color: white;
+    background-color: rgb(0, 0, 0, .75);
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 35px;
+    padding: .5rem;
+    font-size: .9rem;
+}
