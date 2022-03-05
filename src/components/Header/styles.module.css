@@ -25,9 +25,3 @@ header {
     width: 30px;
     height: 30px;
 }
-
-@media (max-height: 650px) {
-    header {
-        display: none;
-    }
-}
