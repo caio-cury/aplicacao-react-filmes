@@ -16,7 +16,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: .5rem;
     background-color: rgb(128, 128, 128, .35);
     padding: 2rem;
     border-radius: 30px;
@@ -25,8 +24,17 @@
     max-height: 90vh;
 }
 
+.card_content {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
 .modal_image {
-    width: 40%;
+    width: 70%;
     margin-bottom: .5rem;
 }
 

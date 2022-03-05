@@ -10,3 +10,12 @@ body {
     --main-green: #00A7A0;
     --background-grey: rgb(128, 128, 128, .30);
 }
+
+::-webkit-scrollbar {
+    width: 0.7em;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(73, 71, 71);
+    border-radius: 20px;
+  }

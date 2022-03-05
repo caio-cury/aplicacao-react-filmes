@@ -19,18 +19,20 @@ export default function Modal({ closeModal, img, title, description, genres, ori
     return (
         <div className={style.modal}>
             <div ref={modalRef} className={style.modal_card}>
-                <img className={style.modal_image} src={img} alt="" />
-                <h1 className={style.movie_title}>{title}</h1>
-                <div className={style.genres_container}>
-                    {genres && genres.map(genre => <span className={style.genre} key={genre.id} >{genre.name}</span>)}
+                <div className={style.card_content}>
+                    <img className={style.modal_image} src={img} alt="" />
+                    <h1 className={style.movie_title}>{title}</h1>
+                    <div className={style.genres_container}>
+                        {genres && genres.map(genre => <span className={style.genre} key={genre.id} >{genre.name}</span>)}
+                    </div>
+                    <p
+                        className={style.origin}
+                    >
+                        Países: {origin && origin.map(country => <span key={country.name}>{`${country.name} `}</span>)}
+                    </p>
+                    <p className={style.runtime}>Duração: {runtime} minutos</p>
+                    <p className={style.movie_preview}>{description}</p>
                 </div>
-                <p
-                    className={style.origin}
-                >
-                    Países: {origin && origin.map(country => <span key={country.name}>{`${country.name} `}</span>)}
-                </p>
-                <p className={style.runtime}>Duração: {runtime} minutos</p>
-                <p className={style.movie_preview}>{description}</p>
             </div>
         </div>
     );

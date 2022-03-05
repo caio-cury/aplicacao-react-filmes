@@ -8,9 +8,7 @@ function Home() {
   return (
     <div className={styles.home_container}>
       <Header />
-      <main>
-        <Carousel />
-      </main>
+      <Carousel />
       <Footer />
     </ div>
   );
