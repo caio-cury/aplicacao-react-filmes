@@ -76,3 +76,10 @@
     padding: 4rem;
     margin: 6rem 13rem;
 }
+
+@media (max-width: 500px) {
+    .previous_page_btn, 
+    .next_page_btn {
+    display: none;
+    }
+}

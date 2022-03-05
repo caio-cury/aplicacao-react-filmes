@@ -68,3 +68,10 @@
 .movie_preview {
     font-size: .9rem;
 }
+
+@media (max-width:800px) {
+    .modal_card{
+        width: 90vw;
+        height: 80vh;
+    }
+}
