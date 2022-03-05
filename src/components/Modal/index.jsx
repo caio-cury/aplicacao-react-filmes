@@ -5,12 +5,14 @@ import useOnClickOutside from '../../hooks/useOnClickOutside';
 export default function Modal({ closeModal, modalData }) {
 
     const { poster_path, title, overview, genres, production_countries, runtime } = modalData;
-
-    const modalRef = useOnClickOutside(() => closeModal())
+    const modalRef = useOnClickOutside(() => closeModal());
 
     return (
         <div className={style.modal}>
-            <div ref={modalRef} className={style.modal_card}>
+            <div
+                className={style.modal_card}
+                ref={modalRef}
+            >
                 <img
                     className={style.close_btn}
                     src={closeBtn}
@@ -26,7 +28,7 @@ export default function Modal({ closeModal, modalData }) {
                     <p
                         className={style.origin}
                     >
-                        Países: {production_countries && production_countries.map(country => <span key={country.name}>{`${country.name} `}</span>)}
+                        Países: {production_countries && production_countries.map(country => <span key={country.name}>{`${country.name} / `}</span>)}
                     </p>
                     <p className={style.runtime}>Duração: {runtime} minutos</p>
                     <p className={style.movie_preview}>{overview}</p>
