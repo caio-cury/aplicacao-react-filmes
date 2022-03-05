@@ -16,12 +16,19 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: .5rem;
     background-color: rgb(128, 128, 128, .35);
     padding: 2rem;
     border-radius: 30px;
     color: white;
     width: 40vw;
     max-height: 90vh;
+}
+
+.close_btn {
+    align-self: flex-end;
+    cursor: pointer;
+    width: 20px;
 }
 
 .card_content {

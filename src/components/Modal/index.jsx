@@ -1,26 +1,24 @@
 import style from './style.module.css';
-import { useEffect, useRef } from 'react';
+import closeBtn from '../../assets/closeBtn.svg'
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 
-export default function Modal({ closeModal, img, title, description, genres, origin, runtime }) {
-    const modalRef = useRef();
-    useEffect(() => {
-        const handler = (event) => {
-            if (!modalRef.current?.contains(event.target)) {
-                closeModal();
-            }
-        }
-        document.addEventListener('mousedown', handler);
+export default function Modal({ closeModal, modalData }) {
 
-        return () => {
-            document.removeEventListener('mousedown', handler);
-        }
-    })
+    const { poster_path, title, overview, genres, production_countries, runtime } = modalData;
+
+    const modalRef = useOnClickOutside(() => closeModal())
 
     return (
         <div className={style.modal}>
             <div ref={modalRef} className={style.modal_card}>
+                <img
+                    className={style.close_btn}
+                    src={closeBtn}
+                    alt="fechar"
+                    onClick={() => closeModal()}
+                />
                 <div className={style.card_content}>
-                    <img className={style.modal_image} src={img} alt="" />
+                    <img className={style.modal_image} src={poster_path} alt="" />
                     <h1 className={style.movie_title}>{title}</h1>
                     <div className={style.genres_container}>
                         {genres && genres.map(genre => <span className={style.genre} key={genre.id} >{genre.name}</span>)}
@@ -28,10 +26,10 @@ export default function Modal({ closeModal, img, title, description, genres, ori
                     <p
                         className={style.origin}
                     >
-                        Países: {origin && origin.map(country => <span key={country.name}>{`${country.name} `}</span>)}
+                        Países: {production_countries && production_countries.map(country => <span key={country.name}>{`${country.name} `}</span>)}
                     </p>
                     <p className={style.runtime}>Duração: {runtime} minutos</p>
-                    <p className={style.movie_preview}>{description}</p>
+                    <p className={style.movie_preview}>{overview}</p>
                 </div>
             </div>
         </div>

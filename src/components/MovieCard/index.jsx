@@ -28,12 +28,7 @@ function MovieCard({ id, img, title, rating }) {
             </div>
             {modal && <Modal
                 closeModal={() => setModal(false)}
-                img={modalData.poster_path}
-                title={modalData.title}
-                description={modalData.overview}
-                genres={modalData.genres}
-                origin={modalData.production_countries}
-                runtime={modalData.runtime}
+                modalData={modalData}
             />}
         </>
     );

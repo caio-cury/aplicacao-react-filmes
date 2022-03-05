@@ -82,4 +82,7 @@
     .next_page_btn {
     display: none;
     }
+    .not_found {
+        margin: 0;
+    }
 }
