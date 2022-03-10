@@ -31,11 +31,11 @@ function Carousel() {
     }
     function handleLeftClick(event) {
         event.preventDefault();
-        carouselRef.current.scrollLeft -= carouselRef.current.offsetWidth;
+        carouselRef.current.scrollLeft -= carouselRef.current.offsetWidth / 2;
     }
     function handleRightClick(event) {
         event.preventDefault();
-        carouselRef.current.scrollLeft += carouselRef.current.offsetWidth;
+        carouselRef.current.scrollLeft += carouselRef.current.offsetWidth / 2;
     }
     return (
         <div className={styles.main_container}>

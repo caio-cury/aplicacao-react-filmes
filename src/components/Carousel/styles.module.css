@@ -37,6 +37,11 @@
     overflow: auto;
     padding: 1.1rem;
     scroll-behavior: smooth;
+    scroll-snap-type: inline mandatory;
+}
+
+.carousel > * {
+    scroll-snap-align: start;
 }
 
 .carousel::-webkit-scrollbar{
